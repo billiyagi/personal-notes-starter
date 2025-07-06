@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NoteForm from "./components/NoteForm";
-import { getActiveNotes, getArchivedNotes } from "./utils";
+import { getActiveNotes } from "./utils";
 import NoteItem from "./components/NoteItem";
 
 class App extends React.Component {
