@@ -57,22 +57,4 @@ const getActiveNotes = () => {
   return getInitialData().filter((note) => note.archived == false)
 }
 
-const getArchivedNotes = () => {
-  return getInitialData().filter((note) => note.archived == true)
-}
-
-const saveNote = ({ title, body }) => {
-  const notes = getInitialData()
-  getInitialData() = [...getInitialData(), {
-    id: `notes-${+new Date()}`,
-    title: title || '(untitled)',
-    body, createdAt: new Date().toISOString(),
-    archived: false,
-  }];
-}
-
-function deleteNote(id) {
-  notes = notes.filter((note) => note.id !== id);
-}
-
-export { getInitialData, showFormattedDate, getActiveNotes, saveNote, deleteNote, getArchivedNotes };
+export { getInitialData, showFormattedDate, getActiveNotes };
